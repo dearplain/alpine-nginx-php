@@ -1,10 +1,9 @@
 FROM alpine:3.3
 
-MAINTAINER Michael Dimmock <https://github.com/michaeldim>
+MAINTAINER lw6c@qq.com
 
 # Install packages
-RUN apk update && apk add execlineb \
-    nginx \
+RUN apk update && apk add nginx \
     bash \
     curl \
     git \
