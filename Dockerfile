@@ -35,3 +35,5 @@ WORKDIR /var/www
 
 # Expose the ports for nginx
 EXPOSE 80 443
+
+CMD ["s6-svscan", "/etc/services.d"]
