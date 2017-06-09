@@ -26,6 +26,7 @@ RUN apk update && apk add execlineb \
 
 # Copy configuration files to root
 COPY rootfs /
+RUN chmod +x /etc/services.d/nginx/* && chmod +x /etc/services.d/php-fpm/*
 
 # Fix permissions
 RUN chown -Rf nginx:www-data /var/www/
