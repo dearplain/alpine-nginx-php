@@ -3,7 +3,8 @@ FROM alpine:3.3
 MAINTAINER lw6c@qq.com
 
 # Install packages
-RUN apk update && apk add nginx \
+RUN apk update && apk add s6 \
+    nginx \
     bash \
     curl \
     git \
