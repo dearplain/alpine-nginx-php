@@ -3,7 +3,7 @@ FROM sillelien/base-alpine:0.10
 MAINTAINER Michael Dimmock <https://github.com/michaeldim>
 
 # Install packages
-RUN apk-install nginx \
+RUN apk update && apk-install nginx \
     bash \
     curl \
     git \
@@ -17,6 +17,7 @@ RUN apk-install nginx \
     php-mysql \
     php-pdo_mysql \
     php-phar \
+    php-iconv \
     php-openssl && \
     curl -sS https://getcomposer.org/installer | php && \
     mv composer.phar /usr/local/bin/composer && \
