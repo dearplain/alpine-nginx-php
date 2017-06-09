@@ -1,9 +1,10 @@
-FROM sillelien/base-alpine:0.10
+FROM alpine:3.3
 
 MAINTAINER Michael Dimmock <https://github.com/michaeldim>
 
 # Install packages
-RUN apk update && apk-install nginx \
+RUN apk update && apk add execlineb \
+    nginx \
     bash \
     curl \
     git \
