@@ -33,8 +33,7 @@ RUN apk update && apk add s6 \
 COPY rootfs /
 RUN chmod +x /etc/services.d/nginx/* && chmod +x /etc/services.d/php-fpm/*
 
-RUN addgroup -g 1000 -S www-data \
- && adduser -u 1000 -D -S -G www-data www-data
+RUN adduser -u 1000 -D -S -G www-data www-data
 
 # Fix permissions
 RUN chown -Rf www-data:www-data /var/www/
