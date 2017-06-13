@@ -31,7 +31,8 @@ RUN apk update && apk add s6 \
 
 # Copy configuration files to root
 COPY rootfs /
-RUN chmod +x /etc/services.d/nginx/* && chmod +x /etc/services.d/php-fpm/*
+RUN chmod +x /etc/services.d/nginx/* && chmod +x /etc/services.d/php-fpm/* && \
+    chmod +x /etc/services.d/.s6-svscan/*
 
 RUN adduser -u 1000 -D -S -G www-data www-data
 
